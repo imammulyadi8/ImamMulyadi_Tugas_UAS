@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="copyright" content="Hak Cipta &copy; 2024 Imam Mulyadi. Semua hak dilindungi.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Imam Mulyadi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f6f9;
+            color: #212529;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            background-color: #3c6e71;
+        }
+
+        .navbar a {
+            color: white;
+        }
+
+        .navbar a:hover {
+            color: #d9d9d9;
+        }
+
+        .text-primary {
+            color: #3c6e71 !important;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer {
+            background-color: #3c6e71;
+            color: white;
+            padding: 1rem;
+        }
+
+        .gallery-container {
+            padding: 2rem;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            aspect-ratio: 4 / 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .info-text {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-style: italic;
+            color: #6c757d;
+        }
+    </style>
+        <style>
+            body {
+                background-color: #f4f6f9;
+                color: #212529;
+                font-family: 'Arial', sans-serif;
+            }
+    
+            .text-primary {
+                color: #3c6e71 !important;
+            }
+    
+            .navbar {
+                background-color: #3c6e71; /* Warna yang Anda pilih sebelumnya */
+            }
+    
+            .navbar .nav-link {
+                color: white;
+                transition: background-color 0.3s, color 0.3s;
+                border-radius: 20px;
+                padding: 10px 15px;
+            }
+    
+            .navbar .nav-link.active {
+                background-color: #2c81ba; /* Warna untuk link aktif */
+                color: white !important;
+            }
+    
+            .navbar .nav-link:hover {
+                background-color: #2c81ba; /* Warna hover yang sebelumnya */
+                color: white;
+            }
+    
+            footer {
+                background-color: #3c6e71;
+                color: white;
+                padding: 1rem;
+            }
+    
+            .contact-icon {
+                font-size: 3rem;
+                margin: 1rem;
+                color: #3c6e71;
+                transition: transform 0.3s ease, color 0.3s ease;
+            }
+    
+            .contact-icon:hover {
+                transform: scale(1.1);
+                color: #2b4f52;
+            }
+    
+            .contact-text {
+                font-size: 1rem;
+                color: #3c6e71;
+            }
+    
+            .container {
+                transition: opacity 1s ease-in-out;
+            }
+    
+            .fade-in {
+                opacity: 0;
+                animation: fadeIn 1.5s forwards;
+            }
+    
+            @keyframes fadeIn {
+                to {
+                    opacity: 1;
+                }
+            }
+    
+            .slide-up {
+                transform: translateY(30px);
+                opacity: 0;
+                animation: slideUp 1.5s forwards;
+            }
+    
+            @keyframes slideUp {
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+        </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Gallery Imam Mulyadi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Section -->
+    <div class="container gallery-container fade-in">
+        <h2 class="text-center text-primary mb-4">Gallery</h2>
+        <p class="info-text">Silakan klik foto untuk mendapatkan keterangan lebih detail</p>
+        <div class="row g-4">
+            <!-- Image Cards -->
+            <!-- Foto 1 -->
+            <div class="col-md-4">
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal" data-title="Foto Perpisahan" data-caption="Moment Foto Perpisahan Angkatan ke 7">
+                    <img src="gallery/1.jpg" alt="Foto 1">
+                </div>
+            </div>
+            <!-- Foto 2 -->
+            <div class="col-md-4">
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal" data-title="Foto Bersama">
+                    <img src="gallery/2.jpg" alt="Foto 2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="photoModal" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="photoModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="" alt="Modal Foto" class="img-fluid mb-3">
+                    <p id="modalCaption"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <p>&copy; 2024 Imam Mulyadi. Semua hak dilindungi. Dilarang menyalin tanpa izin!</p>
+    </footer>
+
+    <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+    <script>
+        // Handle modal content
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const title = this.getAttribute('data-title');
+                const caption = this.getAttribute('data-caption');
+                const imgSrc = this.querySelector('img').getAttribute('src');
+                document.getElementById('photoModalLabel').innerText = title;
+                document.getElementById('modalCaption').innerText = caption;
+                document.getElementById('modalImage').setAttribute('src', imgSrc);
+            });
+        });
+    </script>
+</body>
+</html>
